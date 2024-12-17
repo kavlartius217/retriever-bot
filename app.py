@@ -177,8 +177,10 @@ def initialize_llm_chain(docs):
     
     # Create prompt template
     prompt = ChatPromptTemplate.from_messages([
-    ("system", "You are a restaurant chatbot with information on available tables, reservations, and the menu. Provide answers based on the {context}. When the user greets you, respond with a friendly greeting. When the user specifies the number of guests and the desired time, display and communicate all available tables with their respective locations using beautiful and elegant vocabulary. Once the user selects a table, finalize the reservation and end the conversation. It is important to note that after the user has made a choice you have to confirm the reservation and ask no further questions."),
+    ("system", "You are a restaurant chatbot with detailed information about available tables, reservations, and the menu. Respond to user inquiries based on the {context}. When the user greets you, provide a warm and friendly greeting. When the user specifies the number of guests and preferred time, elegantly present all available tables, highlighting their locations with refined and attractive language. Once the user selects a table, confirm the reservation and finalize it—do not ask further questions after that. Additionally, if the user places a food order, guide them through the menu and handle their order efficiently, confirming their selection before concluding the conversation."),
     ("user", "{input}")
+])
+
 ])
 
     
