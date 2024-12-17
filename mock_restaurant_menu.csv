@@ -1,0 +1,17 @@
+Item Name,Category,Price ($),Calories,Availability
+Margherita Pizza,Pizza,10.99,700,Available
+Pepperoni Pizza,Pizza,12.99,800,Available
+BBQ Chicken Pizza,Pizza,13.99,850,Out of Stock
+Veggie Burger,Burger,8.99,600,Available
+Cheeseburger,Burger,9.99,750,Available
+Caesar Salad,Salad,7.99,350,Available
+Greek Salad,Salad,8.99,300,Available
+Chicken Alfredo Pasta,Pasta,14.99,900,Out of Stock
+Spaghetti Bolognese,Pasta,13.99,850,Available
+Garlic Bread,Appetizer,5.49,400,Available
+Chocolate Lava Cake,Dessert,6.99,450,Available
+Vanilla Ice Cream,Dessert,4.99,200,Available
+Tiramisu,Dessert,7.49,300,Out of Stock
+Espresso,Beverage,2.99,5,Available
+Cappuccino,Beverage,3.49,80,Available
+Green Tea,Beverage,2.49,0,Available
