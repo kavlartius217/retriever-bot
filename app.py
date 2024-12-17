@@ -148,7 +148,7 @@ def main():
     if st.session_state.chat_history:
         st.subheader("Chat History")
         for chat in st.session_state.chat_history:
-            st.text_area("You:", value=chat["user"], height=50, disabled=True)
+            st.text_area("You:", value=chat["user"], height=70, disabled=True)
             st.text_area("Bot:", value=chat["bot"], height=100, disabled=True)
             st.markdown("---")
 
