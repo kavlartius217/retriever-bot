@@ -15,6 +15,130 @@ import os
 # Page configuration
 st.set_page_config(page_title="Restaurant Reservation Bot", page_icon="🍽️")
 
+st.markdown("""
+<style>
+    /* Main app background - matching Amazon gradient */
+    .stApp {
+        background: linear-gradient(135deg, 
+            #000000 0%, 
+            #004D2C 100%);
+    }
+    
+    /* Headers - bolder white */
+    h1, h2, h3 {
+        color: #FFFFFF !important;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        letter-spacing: 0px;
+    }
+    
+    /* Subheader */
+    .subheader {
+        color: #FFFFFF !important;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        opacity: 0.9;
+    }
+    
+    /* Text areas */
+    .stTextArea {
+        background: linear-gradient(145deg, 
+            rgba(0, 51, 30, 0.95) 0%, 
+            rgba(0, 77, 44, 0.95) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        color: #FFFFFF !important;
+        font-weight: 500;
+    }
+    
+    /* Success messages */
+    .st-emotion-cache-16idsys {
+        background: rgba(0, 77, 44, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #FFFFFF;
+        font-weight: 500;
+    }
+    
+    /* Info messages */
+    .st-emotion-cache-16r3i8g {
+        background: rgba(0, 51, 30, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #FFFFFF;
+        font-weight: 500;
+    }
+    
+    /* Buttons */
+    .stButton button {
+        background: #FFFFFF;
+        color: #004D2C;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    .stButton button:hover {
+        background: #F0F0F0;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    /* Audio player */
+    .stAudio {
+        background: rgba(0, 51, 30, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 15px;
+    }
+    
+    /* Chat container */
+    .chat-container {
+        background: linear-gradient(145deg,
+            rgba(0, 51, 30, 0.95) 0%,
+            rgba(0, 77, 44, 0.95) 100%);
+        border-radius: 8px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 15px 0;
+    }
+    
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+        width: 6px;
+        background: #000000;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+    }
+    
+    /* Company branding */
+    .company-brand {
+        text-align: center;
+        padding: 15px;
+        color: #FFFFFF;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9em;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0, 51, 30, 0.95);
+    }
+
+    /* Regular text */
+    .stMarkdown {
+        color: #FFFFFF;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # Initialize session state for chat history
 if 'chat_history' not in st.session_state:
     st.session_state.chat_history = []
