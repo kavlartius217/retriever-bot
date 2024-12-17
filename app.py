@@ -181,8 +181,6 @@ def initialize_llm_chain(docs):
     ("user", "{input}")
 ])
 
-])
-
     
     # Initialize embeddings
     embeddings = GoogleGenerativeAIEmbeddings(
