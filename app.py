@@ -33,7 +33,7 @@ def load_and_process_data():
     docs1 = csv1.load()
     
     # Load table data
-    csv2 = CSVLoader("table_data.csv")
+    csv2 = CSVLoader("table_data (1).csv")
     docs2 = csv2.load()
     
     # Split documents
