@@ -53,9 +53,10 @@ def initialize_llm_chain(docs):
     
     # Create prompt template
     prompt = ChatPromptTemplate.from_messages([
-        ("system", "You are a restaurant chatbot. You have information on available tables for reservations and the menu. Answer user questions based on the {context}.When user specifies the number of guests and the time present the user with all the tables and their respective locations. When user makes a choice among the presented options make the reservation and do not continue the conversation further."),
-        ("user", "{input}")
-    ])
+    ("system", "You are a restaurant chatbot with information on available tables, reservations, and the menu. Provide answers based on the {context}. When the user greets you, respond with a friendly greeting. When the user specifies the number of guests and the desired time, display all available tables with their respective locations. Once the user selects a table, finalize the reservation and end the conversation."),
+    ("user", "{input}")
+])
+
     
     # Initialize embeddings
     embeddings = GoogleGenerativeAIEmbeddings(
