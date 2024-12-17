@@ -20,8 +20,8 @@ if 'chat_history' not in st.session_state:
     st.session_state.chat_history = []
 
 # Setup API keys (replace with st.secrets in production)
-GROQ_API_KEY = "your_groq_api_key"
-GOOGLE_API_KEY = "your_google_api_key"
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 # Configure Google Gemini
 genai.configure(api_key=GOOGLE_API_KEY)
